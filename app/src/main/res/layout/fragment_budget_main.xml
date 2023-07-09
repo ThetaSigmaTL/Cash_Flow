@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/view4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval"
+            app:layout_constraintBottom_toBottomOf="@+id/lastOperationThree"
+            app:layout_constraintEnd_toStartOf="@+id/lastOperationThree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lastOperationThree" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval"
+            app:layout_constraintBottom_toBottomOf="@+id/lastOperationTwo"
+            app:layout_constraintEnd_toStartOf="@+id/lastOperationTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lastOperationTwo" />
+
+        <TextView
+            android:id="@+id/balanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/balance_label"
+            android:textColor="@color/cool_grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/balanceSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:background="@drawable/background_plate_income"
+            android:text="@string/balance_sum"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceLabel" />
+
+        <TextView
+            android:id="@+id/incomeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/income_label"
+            android:textColor="@color/cool_grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/balanceSum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceSum" />
+
+        <TextView
+            android:id="@+id/incomeSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:background="@drawable/background_plate_income"
+            android:text="@string/income_sum"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/balanceSum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/incomeLabel" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_label"
+            android:textColor="@color/cool_grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/balanceSum"
+            app:layout_constraintTop_toBottomOf="@+id/balanceSum" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:background="@drawable/background_plate_expanses"
+            android:text="@string/expanse_sum"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/balanceSum"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <View
+            android:id="@+id/deviderOne"
+            android:layout_width="1dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintStart_toEndOf="@+id/incomeSum"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/incomeLabelOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/income_label_one"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incomeSum" />
+
+        <TextView
+            android:id="@+id/incomeLabelTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_label_two"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incomeLabelOne" />
+
+        <TextView
+            android:id="@+id/incomeLabelThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_label_three"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incomeLabelTwo" />
+
+        <TextView
+            android:id="@+id/incomeLabelFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_label_four"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incomeLabelThree" />
+
+        <TextView
+            android:id="@+id/incomeLabelFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_label_five"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incomeLabelFour" />
+
+        <TextView
+            android:id="@+id/incomeSumOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/income_sum_one"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/deviderOne"
+            app:layout_constraintStart_toEndOf="@+id/incomeLabelOne"
+            app:layout_constraintTop_toBottomOf="@+id/incomeSum" />
+
+
+        <TextView
+            android:id="@+id/incomeSumTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_sum_two"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/deviderOne"
+            app:layout_constraintStart_toEndOf="@+id/incomeLabelTwo"
+            app:layout_constraintTop_toBottomOf="@+id/incomeSumOne" />
+
+        <TextView
+            android:id="@+id/incomeSumThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_sum_three"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/deviderOne"
+            app:layout_constraintStart_toEndOf="@+id/incomeLabelThree"
+            app:layout_constraintTop_toBottomOf="@+id/incomeSumTwo"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/incomeSumFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_sum_four"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/deviderOne"
+            app:layout_constraintStart_toEndOf="@+id/incomeLabelFour"
+            app:layout_constraintTop_toBottomOf="@+id/incomeSumThree" />
+
+        <TextView
+            android:id="@+id/incomeSumFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/income_sum_five"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/deviderOne"
+            app:layout_constraintStart_toEndOf="@+id/incomeLabelFive"
+            app:layout_constraintTop_toBottomOf="@+id/incomeSumFour" />
+
+        <TextView
+            android:id="@+id/expanseLabelOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/expense_label_one"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/expanseSumOne"
+            app:layout_constraintStart_toEndOf="@+id/deviderOne"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/expanseSumOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/expense_sum_one"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/expanseSumTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/expense_sum_two"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expanseSumOne" />
+
+        <TextView
+            android:id="@+id/expanseSumThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/expense_sum_three"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expanseSumTwo" />
+
+        <TextView
+            android:id="@+id/expanseSumFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/expense_sum_four"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expanseSumThree" />
+
+        <TextView
+            android:id="@+id/expanseSumFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/expense_sum_five"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expanseSumFour" />
+
+        <TextView
+            android:id="@+id/expanseLabelTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/expense_label_two"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/expanseSumTwo"
+            app:layout_constraintStart_toEndOf="@+id/deviderOne"
+            app:layout_constraintTop_toBottomOf="@+id/expanseLabelOne" />
+
+        <TextView
+            android:id="@+id/expanseLabelThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/expense_label_three"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/expanseSumThree"
+            app:layout_constraintStart_toEndOf="@+id/deviderOne"
+            app:layout_constraintTop_toBottomOf="@+id/expanseLabelTwo" />
+
+        <TextView
+            android:id="@+id/expanseLabelFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/expense_label_four"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/expanseSumFour"
+            app:layout_constraintStart_toEndOf="@+id/deviderOne"
+            app:layout_constraintTop_toBottomOf="@+id/expanseLabelThree" />
+
+        <TextView
+            android:id="@+id/expanseLabelFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/expense_label_five"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/expanseSumFive"
+            app:layout_constraintStart_toEndOf="@+id/deviderOne"
+            app:layout_constraintTop_toBottomOf="@+id/expanseLabelFour" />
+
+        <View
+            android:id="@+id/deviderTwo"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deviderOne" />
+
+        <LinearLayout
+            android:id="@+id/mainAccountOne"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_plate_corich"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deviderTwo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_card_label"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_card_sum"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainAccountTwo"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_plate_green"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/mainAccountThree"
+            app:layout_constraintStart_toEndOf="@id/mainAccountOne"
+            app:layout_constraintTop_toBottomOf="@id/deviderTwo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_cash_label"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_cash_sum"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainAccountThree"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/card_plate_violet"
+
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deviderTwo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_accounts_label"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_accounts_sum"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/deviderThree"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainAccountTwo" />
+
+        <TextView
+            android:id="@+id/lastOperationOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/main_last_operation_one_label"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/deviderThree"
+            app:layout_constraintTop_toBottomOf="@+id/deviderThree" />
+
+        <TextView
+            android:id="@+id/lastOperationOneSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/last_operation_one_sum"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/deviderThree"
+            app:layout_constraintTop_toBottomOf="@+id/deviderThree" />
+
+        <TextView
+            android:id="@+id/lastOperationTwoSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/last_operation_two_sum"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/deviderThree"
+            app:layout_constraintTop_toBottomOf="@id/lastOperationOneSum" />
+
+        <TextView
+            android:id="@+id/lastOperationThreeSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/last_operation_three_sum"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/deviderThree"
+            app:layout_constraintTop_toBottomOf="@id/lastOperationTwoSum" />
+
+        <TextView
+            android:id="@+id/lastOperationTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/last_operation_two_label"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/lastOperationOne"
+            app:layout_constraintTop_toBottomOf="@id/lastOperationOne" />
+
+        <TextView
+            android:id="@+id/lastOperationThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/last_operation_three_label"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/lastOperationTwo"
+            app:layout_constraintTop_toBottomOf="@id/lastOperationTwo" />
+
+        <TextView
+            android:id="@+id/lastOperationOneDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="@string/last_operation_one_date"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/lastOperationOne"
+            app:layout_constraintStart_toStartOf="@+id/lastOperationOne"
+            app:layout_constraintTop_toBottomOf="@+id/lastOperationOne" />
+
+        <TextView
+            android:id="@+id/lastOperationTwoDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="@string/last_operation_two_date"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/lastOperationTwo"
+            app:layout_constraintStart_toStartOf="@+id/lastOperationTwo"
+            app:layout_constraintTop_toBottomOf="@+id/lastOperationTwo" />
+
+        <TextView
+            android:id="@+id/lastOperationThreeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="@string/last_operation_three_date"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/lastOperationThree"
+            app:layout_constraintStart_toStartOf="@+id/lastOperationThree"
+            app:layout_constraintTop_toBottomOf="@+id/lastOperationThree" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:clickable="true"
+            android:text="@string/all_operations_text_button"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/deviderThree"
+            app:layout_constraintTop_toTopOf="@+id/lastOperationThreeDate" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval"
+            app:layout_constraintBottom_toBottomOf="@+id/lastOperationOne"
+            app:layout_constraintEnd_toStartOf="@+id/lastOperationOne"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lastOperationOne" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

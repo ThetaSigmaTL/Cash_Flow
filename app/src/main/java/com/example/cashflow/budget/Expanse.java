@@ -9,3 +9,4 @@ public class Expanse {
     private Date date;
     private BigDecimal transactionSum;
 }
+

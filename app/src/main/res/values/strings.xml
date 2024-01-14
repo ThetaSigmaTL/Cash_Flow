@@ -3,11 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="balance_label">Баланс</string>
-    <string name="balance_sum">20.000</string>
+    <string name="balance_sum">0</string>
     <string name="income_label">Доход</string>
-    <string name="income_sum">23.000</string>
+    <string name="income_sum">0</string>
     <string name="expense_label">Расходы</string>
-    <string name="expanse_sum">-27.000</string>
+    <string name="expanse_sum">-0</string>
     <string name="income_label_one">TextView</string>
     <string name="income_label_two">TextView</string>
     <string name="income_label_three">TextView</string>
@@ -29,11 +29,11 @@
     <string name="expense_label_four">TextView</string>
     <string name="expense_label_five">TextView</string>
     <string name="main_card_label">Карта</string>
-    <string name="main_card_sum">22.000</string>
+    <string name="main_card_sum">0</string>
     <string name="main_cash_label">Наличные</string>
-    <string name="main_cash_sum">22.000</string>
+    <string name="main_cash_sum">0</string>
     <string name="main_accounts_label">Счета</string>
-    <string name="main_accounts_sum">22.000</string>
+    <string name="main_accounts_sum">0</string>
     <string name="main_last_operation_one_label">TextView</string>
     <string name="last_operation_one_sum">TextView</string>
     <string name="last_operation_two_sum">TextView</string>

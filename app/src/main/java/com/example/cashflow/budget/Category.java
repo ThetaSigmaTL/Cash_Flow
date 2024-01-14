@@ -1,12 +1,20 @@
 package com.example.cashflow.budget;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Category {
     private String name;
+    @PrimaryKey(autoGenerate = true)
+    private  int id;
     private int operationsAmount;
+    @Ignore
     private int folder;
 
 
-    public Category(String name, int operationsAmount, int folder) {
+    public Category() {
         this.name = name;
         this.operationsAmount = operationsAmount;
         this.folder = folder;
@@ -34,5 +42,13 @@ public class Category {
 
     public void setFolder(int folder) {
         this.folder = folder;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -7,6 +7,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.cashflow.budget.BudgetAccounts;
+import com.example.cashflow.budget.BudgetCategories;
+import com.example.cashflow.budget.BudgetExpenses;
+import com.example.cashflow.budget.BudgetMain;
+
 public class ViewPagerStateAdapter extends FragmentStateAdapter {
     private static final int TAB_ITEM_SIZE = 4;
     public ViewPagerStateAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -24,8 +29,21 @@ public class ViewPagerStateAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return null;
+        if (position == 0){
+            return new BudgetMain();
+        }
+        if (position == 1){
+            return new BudgetExpenses();
+        }
+        if (position == 2){
+            return new BudgetCategories();
+        }
+        if (position == 3){
+            return new BudgetAccounts();
+        }
+        return new BudgetMain();
     }
+
 
     @Override
     public int getItemCount() {

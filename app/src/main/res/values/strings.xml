@@ -44,4 +44,5 @@
     <string name="last_operation_two_date">TextView</string>
     <string name="last_operation_three_date">TextView</string>
     <string name="all_operations_text_button"><u>Все операции</u> </string>
+    <string name="dialog_sum_hint">Сумма</string>
 </resources>

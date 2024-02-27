@@ -45,4 +45,24 @@
     <string name="last_operation_three_date">TextView</string>
     <string name="all_operations_text_button"><u>Все операции</u> </string>
     <string name="dialog_sum_hint">Сумма</string>
+    <string-array name="basic_categories">
+        <item>Зарплата</item>
+        <item>Проценты, дивиденды</item>
+        <item>Доход от аренды</item>
+        <item>Подарки</item>
+        <item>Возврат денег</item>
+        <item>Кредит</item>
+        <item>Рестораны</item>
+        <item>Продукты</item>
+        <item>Одежда</item>
+        <item>Для дома</item>
+        <item>Аптека</item>
+        <item>Электроника</item>
+        <item>Подарки</item>
+        <item>Жилье</item>
+        <item>Транспорт</item>
+        <item>Развлечение</item>
+        <item>Связь</item>
+        <item>Другое</item>
+    </string-array>
 </resources>

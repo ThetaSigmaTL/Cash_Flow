@@ -14,6 +14,7 @@ import com.example.cashflow.R;
 
 public class BudgetMain extends Fragment {
     TextView cardAccountView;
+    View view;
 
     public BudgetMain() {
         // Required empty public constructor
@@ -33,7 +34,8 @@ public class BudgetMain extends Fragment {
         // Inflate the layout for this fragment
 
         cardAccountView = rootview.findViewById(R.id.card_balance);
-        cardAccountView.setOnClickListener(new View.OnClickListener() {
+        view = rootview.findViewById(R.id.mainAccountOne);
+        view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CustomDialogFragment dialogFragment = new CustomDialogFragment();

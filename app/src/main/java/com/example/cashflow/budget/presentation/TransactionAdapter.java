@@ -1,42 +1,40 @@
-package com.example.cashflow.budget;
+package com.example.cashflow.budget.presentation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cashflow.R;
-
-import org.w3c.dom.Text;
+import com.example.cashflow.budget.model.Transaction;
 
 import java.util.List;
 
-public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ExpenseHolder> {
-    private final List<Expense> expenseList;
+public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.ExpenseHolder> {
+    private final List<Transaction> transactionList;
     private final LayoutInflater inflater;
 
-    public ExpenseAdapter(List<Expense> expenseList, LayoutInflater inflater) {
-        this.expenseList = expenseList;
+    public TransactionAdapter(List<Transaction> transactionList, LayoutInflater inflater) {
+        this.transactionList = transactionList;
         this.inflater = inflater;
     }
 
     @NonNull
     @Override
-    public ExpenseAdapter.ExpenseHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TransactionAdapter.ExpenseHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.expense_element,parent,false);
-        return new ExpenseAdapter.ExpenseHolder(view);
+        return new TransactionAdapter.ExpenseHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ExpenseAdapter.ExpenseHolder holder, int position) {
-        Expense expense = expenseList.get(position);
-        holder.dateTextView.setText(expense.getDate().toString());
-        holder.categoryTextView.setText(expense.getCategory().getName());
-        holder.sumTextView.setText(expense.getTransactionSum().toString());
+    public void onBindViewHolder(@NonNull TransactionAdapter.ExpenseHolder holder, int position) {
+        Transaction transaction = transactionList.get(position);
+        holder.dateTextView.setText(transaction.getDate().toString());
+        holder.categoryTextView.setText(String.valueOf(transaction.getCategoryId()));
+        holder.sumTextView.setText(transaction.getTransactionSum().toString());
     }
 
     @Override

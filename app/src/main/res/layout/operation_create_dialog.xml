@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/dialog_operationCreate"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFF8E1"
+    android:clipToPadding="false">
+
+    <!-- Поле для ввода суммы -->
+    <EditText
+        android:id="@+id/txtView_operationCreateSum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:textAlignment="textStart"
+        android:inputType="numberDecimal"
+        android:textSize="32sp"
+        android:textColor="#000000"
+        android:background="@null"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Чекбоксы для типа операции -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/cb_expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Расход"
+                android:textColor="#000000"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/cb_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Доход"
+                android:textColor="#000000"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/cb_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Перевод"
+                android:textColor="#000000" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+    <!-- Тексты категорий, счета и даты -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Категория"
+            android:textSize="14sp"
+            android:textColor="#A0A0A0" />
+
+        <Spinner
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Счет"
+            android:textSize="14sp"
+            android:textColor="#A0A0A0" />
+
+        <Spinner
+            android:id="@+id/tv_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Карта"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата"
+            android:textSize="14sp"
+            android:textColor="#A0A0A0" />
+
+        <Button
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выбрать дату"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Кнопка для редактирования -->
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:contentDescription="Редактировать" />
+
+    <Button
+        android:id="@+id/btn_createOperation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить"
+        android:textColor="@color/black"/>
+</LinearLayout>

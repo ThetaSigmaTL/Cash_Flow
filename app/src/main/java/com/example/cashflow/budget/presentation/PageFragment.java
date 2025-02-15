@@ -1,4 +1,4 @@
-package com.example.cashflow;
+package com.example.cashflow.budget.presentation;
 
 import android.os.Bundle;
 

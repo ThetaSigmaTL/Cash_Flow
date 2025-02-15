@@ -1,23 +1,32 @@
-package com.example.cashflow.budget;
+package com.example.cashflow.budget.model;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Category {
     private String name;
     @PrimaryKey(autoGenerate = true)
-    private  int id;
+    private  long id;
     private int operationsAmount;
     @Ignore
     private int folder;
+    @Ignore
+    private ArrayList<Transaction> transactionArrayList;
 
 
-    public Category() {
+
+    public Category(String name,  int folder) {
         this.name = name;
-        this.operationsAmount = operationsAmount;
         this.folder = folder;
+    }
+
+    public Category (){
+
     }
 
     public String getName() {
@@ -44,11 +53,19 @@ public class Category {
         this.folder = folder;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public ArrayList<Transaction> getTransactionArrayList() {
+        return transactionArrayList;
+    }
+
+    public void setTransactionArrayList(Transaction transaction) {
+        transactionArrayList.add(transaction);
     }
 }

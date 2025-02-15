@@ -366,7 +366,6 @@
             android:id="@+id/mainAccountOne"
             android:layout_width="90dp"
             android:layout_height="60dp"
-
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/card_plate_corich"

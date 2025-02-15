@@ -1,4 +1,4 @@
-package com.example.cashflow;
+package com.example.cashflow.budget.presentation;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -7,10 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.cashflow.budget.BudgetAccounts;
-import com.example.cashflow.budget.BudgetCategories;
-import com.example.cashflow.budget.BudgetExpenses;
-import com.example.cashflow.budget.BudgetMain;
+import com.example.cashflow.budget.presentation.categories.BudgetCategories;
 
 public class ViewPagerStateAdapter extends FragmentStateAdapter {
     private static final int TAB_ITEM_SIZE = 4;
@@ -33,7 +30,7 @@ public class ViewPagerStateAdapter extends FragmentStateAdapter {
             return new BudgetMain();
         }
         if (position == 1){
-            return new BudgetExpenses();
+            return new BudgetTransactions();
         }
         if (position == 2){
             return new BudgetCategories();
